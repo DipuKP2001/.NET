@@ -2,7 +2,6 @@
 
     <PropertyGroup>
         <TargetFramework>net9.0</TargetFramework>
-        <RootNamespace>Device_Manager</RootNamespace>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
     </PropertyGroup>

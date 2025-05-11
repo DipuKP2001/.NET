@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Device Manager", "Device Manager\Device Manager.csproj", "{44DD7376-DFBB-40F0-A705-3925ABA2859A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeviceManager.Api", "DeviceManager.Api\DeviceManager.Api.csproj", "{DE528EA0-165D-4B65-8404-B593D00D06E8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{44DD7376-DFBB-40F0-A705-3925ABA2859A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{44DD7376-DFBB-40F0-A705-3925ABA2859A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{44DD7376-DFBB-40F0-A705-3925ABA2859A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE528EA0-165D-4B65-8404-B593D00D06E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE528EA0-165D-4B65-8404-B593D00D06E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE528EA0-165D-4B65-8404-B593D00D06E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE528EA0-165D-4B65-8404-B593D00D06E8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
