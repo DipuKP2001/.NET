@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\DeviceManager.Api.props" />
+</Project>
