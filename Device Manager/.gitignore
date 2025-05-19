@@ -1,0 +1,48 @@
+# Build results
+**/bin/
+**/obj/
+*.dll
+*.pdb
+*.exe
+*.deps.json
+*.runtimeconfig.json
+*.sourcelink.json
+*.staticwebassets.*
+*.csproj.FileListAbsolute.txt
+*.GeneratedMSBuildEditorConfig.editorconfig
+*.AssemblyInfo.cs
+*.AssemblyAttributes.cs
+*.assets.cache
+*.nuget.*
+*.g.props
+*.g.targets
+*.genruntimeconfig.cache
+*.ref.dll
+*.refint.dll
+
+# NuGet
+project.lock.json
+project.assets.json
+project.nuget.cache
+*.nupkg
+*.snupkg
+.nuget/
+
+# VS and Rider IDEs
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.rsuser
+*.dbmdl
+*.bak
+
+# Logs
+*.log
+
+# ASP.NET Core
+wwwroot/
+node_modules/
+dist/
