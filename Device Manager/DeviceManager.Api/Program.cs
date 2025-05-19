@@ -1,4 +1,4 @@
-using Device_Manager.Services;
+using Device_Manager;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,7 +9,7 @@ builder.Services.AddOpenApi();
 builder.Services.AddControllers();
 
 // Register services
-builder.Services.AddSingleton<IDeviceService, DeviceService>();
+builder.Services.RegisterServices();
 
 var app = builder.Build();
 

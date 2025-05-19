@@ -2,7 +2,7 @@
 
 namespace Device_Manager.Services;
 
-public class DeviceService : IDeviceService
+internal class DeviceService : IDeviceService
 {
     public List<Device> GetAll()
     {

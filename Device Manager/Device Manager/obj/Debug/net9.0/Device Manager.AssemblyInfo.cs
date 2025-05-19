@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Device Manager")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8e00224e6cc79a1e83e4c0aa8e61e0e79ba4667a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+176d97a9ea3a0326ecf986295787fd05985b0c1f")]
 [assembly: System.Reflection.AssemblyProductAttribute("Device Manager")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Device Manager")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
