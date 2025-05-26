@@ -8,8 +8,8 @@ internal class DeviceService : IDeviceService
     {
         return
         [
-            new Device { Id = 1, Name = "Device 1" },
-            new Device { Id = 2, Name = "Device 2" }
+            new Device { Id = 1, Name = "Device 1", Platform = "Linux" },
+            new Device { Id = 2, Name = "Device 2", Platform = "Windows"  }
         ];
     }
 }
