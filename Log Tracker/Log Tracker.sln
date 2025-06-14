@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogTracker.Api", "LogTracke
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogTracker", "LogTracker\LogTracker.csproj", "{9F007732-2269-4835-AEB6-C9E5352DAF04}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogTracker.Implementation", "LogTracker.Implementation\LogTracker.Implementation.csproj", "{BDE8C09F-492E-4A75-881F-D163B7C4DF0D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{9F007732-2269-4835-AEB6-C9E5352DAF04}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F007732-2269-4835-AEB6-C9E5352DAF04}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F007732-2269-4835-AEB6-C9E5352DAF04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDE8C09F-492E-4A75-881F-D163B7C4DF0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDE8C09F-492E-4A75-881F-D163B7C4DF0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDE8C09F-492E-4A75-881F-D163B7C4DF0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDE8C09F-492E-4A75-881F-D163B7C4DF0D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
