@@ -4,7 +4,10 @@ namespace LogTracker.Services;
 
 public interface ILogService
 {
-    Task LogAsync(Log log);
-    
     Task<IEnumerable<Log>> GetLogsAsync();
+    
+    void AddLogSync(Log log);
+    
+    Task AddLogAsync(Log log);
+    
 }

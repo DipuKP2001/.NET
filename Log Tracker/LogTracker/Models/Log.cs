@@ -1,7 +1,10 @@
-﻿namespace LogTracker.Models;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace LogTracker.Models;
 
 public sealed class Log
 {
+    [Key]
     public int Id { get; set; }
     
     public string Message { get; set; }

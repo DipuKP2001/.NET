@@ -13,8 +13,15 @@ public class LogService : ILogService
     {
         _context = context;
     }
-    
-    public async Task LogAsync(Log log)
+
+    public void AddLogSync(Log log)
+    {
+        _context.Logs.Add(log);
+        
+        _context.SaveChanges();
+    }
+
+    public async Task AddLogAsync(Log log)
     {
         _context.Logs.Add(log);
         
