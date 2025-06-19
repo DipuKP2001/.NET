@@ -12,10 +12,12 @@ public sealed class LogsController : ControllerBase
     private const int TotalLogsCount = 5000;
     
     private readonly ILogService _logService;
+    private readonly ILogFlushService _logFlushService;
     
-    public LogsController(ILogService logService)
+    public LogsController(ILogService logService, ILogFlushService logFlushService)
     {
         _logService = logService ?? throw new ArgumentNullException(nameof(logService));
+        _logFlushService = logFlushService ?? throw new ArgumentNullException(nameof(logFlushService));
     }
 
     [HttpGet]
@@ -95,5 +97,25 @@ public sealed class LogsController : ControllerBase
         
         watch.Stop();
         return Ok($"Asynchronous Parallel Logs, Total Time: {watch.ElapsedMilliseconds} ms");
+    }
+
+    [HttpPost]
+    [Route("flush")]
+    public IActionResult FlushLogs()
+    {
+        var watch = Stopwatch.StartNew();
+        
+        for (var i = 0; i < TotalLogsCount; i++)
+        {
+            var log = new Log
+            {
+                Message = $"Log {i}",
+                Severity = $"Severity {i}"
+            };
+            
+            _logFlushService.AddLog(log);
+        }
+        
+        return Ok($"Flush completed. Total Time: {watch.ElapsedMilliseconds} ms");
     }
 }
