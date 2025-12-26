@@ -1,17 +1,17 @@
 ﻿using System.Diagnostics;
 
-// Console.WriteLine("============================START============================");
-//
-// Console.WriteLine(AppDomain.CurrentDomain.FriendlyName);
-// Console.WriteLine(Environment.CurrentDirectory);
-// Console.WriteLine(Environment.Is64BitOperatingSystem);
-// Console.WriteLine(Environment.Is64BitProcess);
-// Console.WriteLine(Environment.ProcessorCount);
-// Console.WriteLine(Environment.IsPrivilegedProcess);
-// Console.WriteLine(Environment.Version);
-// Console.WriteLine(Environment.OSVersion);
-//
-// Console.WriteLine("============================END============================");
+Console.WriteLine("============================START============================");
+
+Console.WriteLine(AppDomain.CurrentDomain.FriendlyName);
+Console.WriteLine(Environment.CurrentDirectory);
+Console.WriteLine(Environment.Is64BitOperatingSystem);
+Console.WriteLine(Environment.Is64BitProcess);
+Console.WriteLine(Environment.ProcessorCount);
+Console.WriteLine(Environment.IsPrivilegedProcess);
+Console.WriteLine(Environment.Version);
+Console.WriteLine(Environment.OSVersion);
+
+Console.WriteLine("============================END============================");
 
 
 
@@ -67,4 +67,50 @@ stopwatch.Stop();
 Console.WriteLine($"Total time taken for 6 tasks: {stopwatch.ElapsedMilliseconds} ms");
 
 
+
+Console.WriteLine("============================Thread Safety============================");
+
+const int expected = 1000 * 1000;
+var counter = 0;
+var semaphore = new SemaphoreSlim(1, 1);
+// object lockObject = new();
+// var tasks = new List<Task>();
+//
+// for (var i = 0; i < 1000; i++)
+// {
+//     tasks.Add(Task.Run(() =>
+//     {
+//         for (var j = 0; j < 1000; j++)
+//         {
+//             lock (lockObject)
+//             {
+//                 counter++;
+//             }
+//             // Interlocked.Increment(ref counter); Only for increment/decrement
+//         }
+//     }));
+// }
+
+var tasks = Enumerable.Range(0, 1000).Select(async _ =>
+{
+    for (var j = 0; j < 1000; j++)
+    {
+        await semaphore.WaitAsync();
+
+        try
+        {
+            counter++;
+        }
+        finally
+        {
+            semaphore.Release();
+        }
+    }
+});
+
+await Task.WhenAll(tasks);
+Console.WriteLine($"Expected counter: {expected}");
+Console.WriteLine($"Actual counter (semaphore) : {counter}");
+
+Console.WriteLine("============================END============================");
 
