@@ -1,6 +1,8 @@
-using System.Diagnostics;
 using TaskManager.Middleware;
+using TaskManager.Repositories;
+using TaskManager.Repositories.Interfaces;
 using TaskManager.Services;
+using TaskManager.Services.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +12,10 @@ builder.Services.AddOpenApi();
 // builder.Services.AddSingleton<IWeatherForecastService, WeatherForecastService>();
 // builder.Services.AddScoped<IWeatherForecastService, WeatherForecastService>();
 builder.Services.AddTransient<IWeatherForecastService, WeatherForecastService>();
+
+builder.Services.AddSingleton<ITaskRepository, TaskRepository>();
+builder.Services.AddSingleton<ITaskService, TaskService>();
+
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 
