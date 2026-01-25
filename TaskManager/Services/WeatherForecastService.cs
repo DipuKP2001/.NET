@@ -1,4 +1,6 @@
-﻿namespace TaskManager.Services;
+﻿using TaskManager.Services.Interfaces;
+
+namespace TaskManager.Services;
 
 public class WeatherForecastService : IWeatherForecastService
 {

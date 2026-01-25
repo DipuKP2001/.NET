@@ -1,4 +1,4 @@
-﻿namespace TaskManager.Services;
+﻿namespace TaskManager.Services.Interfaces;
 
 public interface IWeatherForecastService
 {
