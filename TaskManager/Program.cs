@@ -16,6 +16,9 @@ builder.Services.AddTransient<IWeatherForecastService, WeatherForecastService>()
 builder.Services.AddSingleton<ITaskRepository, TaskRepository>();
 builder.Services.AddSingleton<ITaskService, TaskService>();
 
+builder.Services.AddSingleton<IFileProvider, FileProvider>();
+builder.Services.AddSingleton<IFileService, FileService>();
+
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 
